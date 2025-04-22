@@ -1,0 +1,35 @@
+package sorting;
+
+import java.util.Arrays;
+
+public class selection {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] a= {4,3,2,6,112,567,9876};
+		System.out.println(Arrays.toString(a));
+		sort(a);
+		System.out.println(Arrays.toString(a));
+		
+
+	}
+	public static void sort(int[] a)
+	{
+		
+		for(int i=0;i<a.length-1;i++)
+		{
+			int index=i;
+			for(int j=i+1;j<a.length;j++)
+			{
+				if(a[index]>a[j])
+				{
+					index=j;
+				}
+			}
+			int temp=a[index];
+			a[index]=a[i];
+			a[i]=temp;
+			
+		}
+	}
+}
