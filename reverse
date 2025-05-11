@@ -1,0 +1,22 @@
+package numberPrograms;
+
+public class reverse {
+	
+	public static void main(String[] args)
+	{
+
+		int a=9889;
+		int rev=0;
+		int num=a;
+		while(a>0)
+		{
+			int r=a%10;
+			rev=(rev*10)+r;
+			a/=10;
+		}
+		if(num==rev)  System.out.println("reverse");
+		else  System.out.println("not a reverse");
+			
+	}
+
+}
