@@ -1,0 +1,28 @@
+package numberPrograms;
+
+public class strongNumber {
+	
+	public static void main(String[] args)
+	{
+		for(int n=1;n<=1000;n++) 
+		{
+			int num=n;
+			int sum=0;
+			while(num>0)
+			{
+				int r=num%10;
+				int fact=1;
+				for(int i=1;i<=r;i++)
+				{
+					fact*=i;
+				}
+				sum+=fact;
+				num/=10;
+			}
+			if(sum==n) System.out.println(n);
+		}
+	
+		
+	}
+
+}
